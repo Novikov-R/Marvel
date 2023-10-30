@@ -1,18 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import App from './components/app/App';
-import MarvelService from "./services/MarvelService";
 
 import './style/style.scss';
 
-const marvelService = new MarvelService();
+const container = document.querySelector('#root');
+const root = createRoot(container);
 
-marvelService.getCharacter(1011228).then(res => console.log(res))
-
-ReactDOM.render(
+root.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.getElementById('root')
 );
 
