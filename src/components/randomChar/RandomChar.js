@@ -55,7 +55,7 @@ class RandomChar extends Component {
         const {char, loading, error} = this.state;
         const spinner = loading ? <Spinner/> : null;
         const errorMessage = error ? <ErrorMessage/> : null;
-        const content = (spinner || errorMessage) ? null : view(char);
+        const content = (spinner || errorMessage) ? null : View(char);
 
         return (
             <div className="randomchar">
@@ -82,7 +82,7 @@ class RandomChar extends Component {
     }
 }
 
-const view = (char) => {
+const View = (char) => {
     const {name, description, thumbnail, homepage, wiki} = char
     return(
         <div className="randomchar__block">
