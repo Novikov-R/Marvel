@@ -11,7 +11,7 @@ class CharInfo extends Component {
 
     state = {
         char: null,
-        loading: true,
+        loading: false,
         error: false,
     };
 
